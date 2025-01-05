@@ -17,3 +17,9 @@ target("summary")
     set_kind("binary")
     add_deps("test")
     add_files("learn/summary.cpp")
+    -- 添加 pthread 库链接
+    add_links("pthread")
+    -- 添加编译和链接选项以支持 POSIX 线程
+    add_cxflags("-pthread")
+    add_ldflags("-pthread")
+
